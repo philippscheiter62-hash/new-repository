@@ -1,0 +1,35 @@
+name: Deploy to Strato
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: (sudo apt-get update -qq || true) && sudo apt-get install -y -qq lftp
+
+      # Uploads site/ to the Strato webspace. Never deletes files on the server.
+      - name: Upload via SFTP
+        env:
+          STRATO_HOST: ${{ secrets.STRATO_HOST }}
+          STRATO_USER: ${{ secrets.STRATO_USER }}
+          LFTP_PASSWORD: ${{ secrets.STRATO_PASSWORD }}
+          STRATO_REMOTE_DIR: ${{ vars.STRATO_REMOTE_DIR || '.' }}
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes
+            set net:max-retries 2
+            open --env-password -u \"$STRATO_USER\" sftp://$STRATO_HOST
+            mirror --reverse --verbose --parallel=4 site/ \"$STRATO_REMOTE_DIR\"
+          "

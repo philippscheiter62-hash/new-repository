@@ -1,0 +1,31 @@
+name: Check Strato connection
+
+# Read-only: logs in via SFTP and lists the target directory. Uploads nothing.
+on:
+  push:
+    branches-ignore: [main]
+    paths: [".github/workflows/check-connection.yml"]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install lftp
+        run: (sudo apt-get update -qq || true) && sudo apt-get install -y -qq lftp
+
+      - name: List remote directory
+        env:
+          STRATO_HOST: ${{ secrets.STRATO_HOST }}
+          STRATO_USER: ${{ secrets.STRATO_USER }}
+          LFTP_PASSWORD: ${{ secrets.STRATO_PASSWORD }}
+          STRATO_REMOTE_DIR: ${{ vars.STRATO_REMOTE_DIR || '.' }}
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes
+            set net:max-retries 2
+            open --env-password -u \"$STRATO_USER\" sftp://$STRATO_HOST
+            cd \"$STRATO_REMOTE_DIR\"
+            pwd
+            cls -la
+          "
