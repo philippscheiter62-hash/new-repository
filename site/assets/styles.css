@@ -264,7 +264,7 @@ section{scroll-margin-top:6.5rem}
 .f-brand p,.f-col{line-height:1.6}
 .site-footer a{color:var(--muted);text-decoration:none}
 .site-footer a:hover{color:var(--fir);text-decoration:underline}
-.site-footer a.num{font-family:inherit;font-variation-settings:normal;letter-spacing:0}
+
 .site-footer .f-legal{gap:.2rem}
 .f-copy{margin-top:1.5rem;font-size:.8rem}
 .f-copy::before{margin-bottom:1rem}
@@ -302,3 +302,4 @@ section{scroll-margin-top:6.5rem}
   .f-copy{text-align:center}
 }
 @media (max-width:40rem){.subnav{justify-content:safe center}}
+.site-footer a.num,.site-footer .num{font-family:var(--serif);font-variation-settings:"SOFT" 100;font-variant-numeric:lining-nums;letter-spacing:.01em}.contact-tiles li:nth-child(2) a.value{font-size:1rem}@media (max-width:52rem){.topics .chips li{font-size:.88rem;padding:.4rem .8rem;gap:.4rem}}
