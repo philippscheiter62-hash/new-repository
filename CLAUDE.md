@@ -1,15 +1,9 @@
-# Home Assistant über Claude
+# Website (Strato)
 
-Dieses Repo verbindet Claude mit Home Assistant über den MCP-Server `ha-mcp`
-(https://github.com/homeassistant-ai/ha-mcp). Die Tools heißen `ha_*`.
+Die Website liegt als statisches HTML in `site/`. Ein Push auf `main` lädt `site/`
+per SFTP auf den Strato-Webspace hoch (`.github/workflows/deploy.yml`).
 
-## Regeln beim Arbeiten mit Home Assistant
-
-- Bevor du ein bestehendes Dashboard änderst: aktuelle Konfiguration mit
-  `ha_config_get_dashboard` holen und als YAML unter `dashboards/<url_path>.yaml`
-  sichern, damit man zurückrollen kann.
-- Neue oder geänderte Dashboards ebenfalls als YAML in `dashboards/` ablegen.
-- Nur Entitäten verwenden, die es wirklich gibt (vorher abfragen), keine IDs raten.
-- Vor riskanten Aktionen (Schlösser, Alarmanlage, Heizung abschalten, Automationen
-  löschen) nachfragen.
-- Keine Tokens oder URLs mit Secret-Pfad ins Repo schreiben.
+- Änderungen auf einem Feature-Branch machen. Live geht erst der Merge nach `main`.
+- Der Deploy löscht nichts auf dem Server. Dateien, die hier entfernt werden,
+  bleiben online, bis sie auf dem Server gelöscht werden. Darauf hinweisen.
+- Keine Zugangsdaten ins Repo schreiben. Sie liegen als GitHub-Secrets vor.
