@@ -80,13 +80,14 @@ Bewusst entfernt: Lenas Zitat und der Hinweis „Falls ich gerade in einer Sitzu
       Indexierung erneut beantragen.
 - [ ] Alte Adressen `/impressum/` und `/57-2/` in der Search Console entfernen
       („Nur diese URL“).
-- [ ] Berufshaftpflicht im Impressum: Versicherer, Anschrift, räumlicher
-      Geltungsbereich fehlen.
+- [x] Berufshaftpflicht im Impressum ergänzt: VGH Landschaftliche Brandkasse
+      Hannover, Schiffgraben 4, 30159 Hannover, Geltungsbereich Deutschland
+      (Gesellschaft und Geltungsbereich gegen die Police prüfen).
 - [ ] Alte Profilseite bei Praxis Ewering: um Deaktivierung bitten, dann über
       Googles Tool für veraltete Inhalte entfernen.
 - [ ] Verzeichnisse mit identischen Angaben pflegen: PTK-NRW-Suche, PTN Münster,
       therapie.de, jameda, Apple Business Connect, Bing Places.
-- [ ] Google-Profil: Telefonzeiten, Logo, nach und nach Bewertungen
+- [ ] Google-Profil: Logo, nach und nach Bewertungen
       (Schweigepflicht und Berufsrecht beachten).
 - [ ] Search Console in 4–6 Wochen erneut auswerten.
 
@@ -94,8 +95,8 @@ Bewusst entfernt: Lenas Zitat und der Hinweis „Falls ich gerade in einer Sitzu
 
 - Fotos der Praxisräume und des Eingangs mit gut sichtbarer Hausnummer (Website
   und Google-Profil). Größter verbleibender Hebel für Vertrauen.
-- ADHS-Diagnostik: offen. Falls angeboten, eigene FAQ und Stichwort im Angebot
-  („adhs diagnostik kinder“ wird gesucht).
-- Telefonzeiten auf Website und im Profil, dann auch in den strukturierten Daten.
+- ~~ADHS-Diagnostik~~: wird angeboten. FAQ, Stichwort im Angebot und
+  strukturierte Daten ergänzt (Oktober 2026).
+- Telefonzeiten: bewusst **nicht** auf der Website (Entscheidung Oktober 2026).
 - Optional: FAQ zu Selbstzahler:innen bzw. gesetzlich Versicherten, falls Lena
   diese behandelt.
