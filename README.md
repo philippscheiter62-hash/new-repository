@@ -1,2 +1,2 @@
-# new-repository
+# Home Assistant
 Repository created by GitHub Copilot
