@@ -1,0 +1,10 @@
+{
+  "name": "Lena Beßler – Psychotherapie für Kinder und Jugendliche",
+  "short_name": "Lena Beßler",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FAFCFB",
+  "theme_color": "#FAFCFB",
+  "lang": "de",
+  "icons": [{"src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}]
+}

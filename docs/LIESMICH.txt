@@ -1,0 +1,16 @@
+Website Lena Beßler – Upload-Anleitung
+======================================
+
+1. Hochladen
+   Den kompletten INHALT dieses Ordners (inkl. der versteckten Datei .htaccess)
+   per FTP/SFTP in das Web-Stammverzeichnis der Domain laden.
+   Vorher die alte WordPress-Installation sichern und entfernen bzw. die Domain
+   auf das neue Verzeichnis zeigen lassen.
+
+2. Nach dem Upload
+   - https://psychotherapie-bessler.de/impressum/ muss auf /impressum.html weiterleiten
+   - In der Google Search Console die sitemap.xml einreichen
+   - Google-Unternehmensprofil (Maps) mit gleicher Adresse/Telefonnummer pflegen
+
+Hinweis: .htaccess funktioniert nur bei Apache-Hostern (Strato, IONOS, all-inkl u. a.).
+Wechselt der Hoster, bitte Abschnitt "2. Hosting" in datenschutz.html anpassen.

@@ -41,3 +41,10 @@ Manuell auslösen: **Actions → Deploy to Strato → Run workflow**.
 
 > Der Deploy lädt nur hoch und **löscht nichts** auf dem Server. Wird hier eine
 > Datei entfernt, muss sie auch auf dem Server gelöscht werden.
+
+## Hinweis zum Umstieg von WordPress
+
+Falls auf dem Webspace noch die alte WordPress-Installation liegt: vorher sichern.
+Der Deploy überschreibt die `.htaccess` und lädt die neuen Dateien hoch, entfernt
+aber keine WordPress-Dateien (`index.php`, `wp-*`). Die müssen bei Strato von Hand
+gelöscht werden. Details siehe [`docs/LIESMICH.txt`](docs/LIESMICH.txt).

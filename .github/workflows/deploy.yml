@@ -31,5 +31,5 @@ jobs:
             set sftp:auto-confirm yes
             set net:max-retries 2
             open --env-password -u \"$STRATO_USER\" sftp://$STRATO_HOST
-            mirror --reverse --verbose --parallel=4 --exclude-glob .gitkeep site/ \"$STRATO_REMOTE_DIR\"
+            mirror --reverse --verbose --parallel=4 site/ \"$STRATO_REMOTE_DIR\"
           "
