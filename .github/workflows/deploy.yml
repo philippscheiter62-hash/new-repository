@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+        run: (sudo apt-get update -qq || true) && sudo apt-get install -y -qq lftp
 
       # Uploads site/ to the Strato webspace. Never deletes files on the server.
       - name: Upload via SFTP
